@@ -3,171 +3,269 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>C.M Electrical & Plumbing — Midrand's Trusted Repair Experts</title>
-  <meta name="description" content="C.M Electrical and Plumbing Service — Fast, reliable repairs in Midrand. Blocked drains, electrical faults, geysers, and maintenance." />
-  <meta name="theme-color" content="#0b6b6b">
-
+  <title>C.M Electrical & Plumbing — Premium Repair Services</title>
+  <meta name="description" content="Midrand's top-rated electrical and plumbing experts. 24/7 emergency repairs, installations, and maintenance." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      /* Branding Colors */
-      --accent: #0b6b6b;       /* Deep Teal - Professional & Trustworthy */
-      --accent-dark: #074a4a;
-      --text-dark: #1e293b;
-      --text-gray: #64748b;
+    :root {
+      /* Premium Color Palette */
+      --primary: #0f172a;      /* Dark Navy - Professional base */
+      --primary-light: #1e293b; 
+      --accent: #0ea5e9;       /* Bright Blue - Trust/Water */
+      --action: #f59e0b;       /* Amber - Electrical/Action/Attention */
+      
+      --text-main: #334155;
+      --text-light: #64748b;
       --bg-light: #f8fafc;
       --white: #ffffff;
       
-      --radius: 16px;
-      --shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
-      --container: 1100px;
+      --radius-sm: 8px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
       
-      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      --container: 1200px;
     }
 
-    /* Reset & Base */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg-light);color:var(--text-dark);line-height:1.6;font-size:16px}
-    img{max-width:100%;height:auto;display:block}
-    h1,h2,h3{line-height:1.1;letter-spacing:-0.02em;color:var(--text-dark)}
+    /* --- Base Resets --- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { 
+      background: var(--bg-light); 
+      color: var(--text-main); 
+      font-family: "Inter", sans-serif; 
+      line-height: 1.6; 
+      font-size: 16px; 
+    }
     
-    .container{max-width:var(--container);margin:0 auto;padding:0 24px}
+    h1, h2, h3, h4 { 
+      font-family: "Outfit", sans-serif; 
+      color: var(--primary); 
+      line-height: 1.2; 
+      letter-spacing: -0.02em; 
+    }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+    
+    /* --- Utility Classes --- */
+    .section { padding: 80px 0; }
+    .bg-white { background: var(--white); }
+    .text-center { text-align: center; }
+    .badge {
+      display: inline-block;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+    
+    /* --- Buttons --- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 28px; border-radius: 8px; font-weight: 600;
+      font-size: 1rem; border: none; cursor: pointer; gap: 8px;
+    }
+    .btn-primary { 
+      background: var(--action); color: var(--primary); 
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); background: #fbbf24; }
+    
+    .btn-dark { 
+      background: var(--primary); color: var(--white); 
+    }
+    .btn-dark:hover { background: var(--primary-light); }
 
-    /* Navigation */
-    .site-header{
-      position:sticky;top:0;z-index:100;
-      background:rgba(255,255,255,0.95);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(0,0,0,0.05);
-      padding:16px 0;
+    /* --- Header --- */
+    .site-header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 16px 0;
     }
-    .header-inner{display:flex;justify-content:space-between;align-items:center}
-    .logo{font-weight:800;font-size:1.3rem;color:var(--accent);text-decoration:none;display:flex;align-items:center;gap:8px}
-    .nav{display:none} 
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { 
+      font-weight: 800; font-size: 1.4rem; color: var(--primary); 
+      display: flex; align-items: center; gap: 10px; font-family: "Outfit", sans-serif;
+    }
+    .logo span { color: var(--accent); }
     
-    @media(min-width: 768px){
-      .nav{display:flex;gap:32px;align-items:center}
-      .nav a{text-decoration:none;color:var(--text-dark);font-weight:500;font-size:0.95rem;transition:color 0.2s}
-      .nav a:hover{color:var(--accent)}
-      .nav-btn{background:var(--accent);color:var(--white)!important;padding:10px 24px;border-radius:99px;transition:transform 0.2s}
-      .nav-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(11,107,107,0.25)}
+    .nav { display: none; }
+    @media(min-width: 768px) {
+      .nav { display: flex; gap: 32px; align-items: center; }
+      .nav a { font-weight: 500; font-size: 0.95rem; color: var(--text-main); }
+      .nav a:hover { color: var(--accent); }
     }
 
-    /* HERO SECTION */
-    .hero{
-      position:relative;
-      /* Image: Repair focused (Sink/Pipe repair) */
-      background-image: linear-gradient(135deg, rgba(11, 107, 107, 0.92) 0%, rgba(15, 155, 144, 0.85) 100%), 
-                        url('https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&q=80&w=1920'); 
-      background-size:cover;
-      background-position:center;
-      color:var(--white);
-      padding: 80px 0 100px;
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      background: var(--primary);
+      padding: 120px 0 160px; /* Extra padding bottom for overlap */
+      overflow: hidden;
+    }
+    /* Background Image with Dark Overlay */
+    .hero-bg {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=2070');
+      background-size: cover; background-position: center;
+      opacity: 0.15;
     }
     
-    .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
-    
-    .hero-content h1{color:var(--white);font-size:2.5rem;font-weight:800;margin-bottom:20px}
-    .hero-content p{font-size:1.1rem;color:rgba(255,255,255,0.9);margin-bottom:32px;max-width:500px}
-    
-    .cta-group{display:flex;flex-direction:column;gap:12px}
-    .btn{
-      display:inline-flex;justify-content:center;align-items:center;
-      padding:16px 32px;border-radius:12px;
-      font-weight:700;text-decoration:none;transition:all 0.3s;
-      border:none;cursor:pointer;font-size:1rem;
+    .hero-content {
+      position: relative; z-index: 10;
+      display: grid; grid-template-columns: 1fr; gap: 50px;
+      align-items: center;
     }
-    .btn-primary{background:var(--white);color:var(--accent);box-shadow:0 4px 20px rgba(0,0,0,0.15)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.2)}
-    .btn-outline{border:2px solid rgba(255,255,255,0.4);color:var(--white)}
-    .btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--white)}
+    
+    .hero-text h1 { 
+      color: var(--white); font-size: 2.8rem; margin-bottom: 24px; 
+    }
+    .hero-text p { 
+      color: rgba(255,255,255,0.8); font-size: 1.15rem; margin-bottom: 32px; max-width: 500px; 
+    }
+    
+    /* Hero Floating Card */
+    .hero-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 40px; border-radius: var(--radius-lg);
+      color: var(--white);
+    }
+    .check-list { list-style: none; margin-bottom: 24px; }
+    .check-list li { 
+      display: flex; gap: 12px; align-items: center; margin-bottom: 12px; font-weight: 500; 
+    }
+    .check-icon { color: var(--action); }
 
-    /* Glass Card */
-    .glass-card{
-      background:rgba(255, 255, 255, 0.15);
-      backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,0.2);
-      padding:32px;
-      border-radius:var(--radius);
-      color:var(--white);
+    /* --- Stats Section (Floating Overlap) --- */
+    .stats-container {
+      margin-top: -80px; /* Pulls it up over the hero */
+      position: relative; z-index: 20;
     }
-    .glass-card h3{color:var(--white);margin-bottom:16px}
-    .feature-row{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
-    .feature-row svg{flex-shrink:0;color:#86efac} 
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      padding: 40px;
+      text-align: center;
+    }
+    .stat-item h3 { font-size: 2.5rem; color: var(--accent); margin-bottom: 5px; }
+    .stat-item p { font-size: 0.9rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; }
 
-    /* Services Section */
-    .section{padding:80px 0}
-    .text-center{text-align:center;max-width:700px;margin:0 auto 56px}
-    .subtitle{color:var(--accent);font-weight:700;text-transform:uppercase;font-size:0.85rem;letter-spacing:1px;margin-bottom:8px;display:block}
-    
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:24px}
-    .service-card{
-      background:var(--white);padding:32px;
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      transition:transform 0.3s ease;
-      border:1px solid rgba(0,0,0,0.03);
+    /* --- Services Section --- */
+    .services-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; 
     }
-    .service-card:hover{transform:translateY(-5px)}
-    .icon-box{
-      width:56px;height:56px;background:rgba(11,107,107,0.1);
-      color:var(--accent);border-radius:12px;
-      display:flex;align-items:center;justify-content:center;
-      margin-bottom:20px;
+    .service-card {
+      background: var(--white); padding: 40px 30px;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      transition: 0.3s;
+      position: relative; overflow: hidden;
     }
-    .service-card h3{margin-bottom:12px;font-size:1.25rem}
-    .service-card p{color:var(--text-gray);font-size:0.95rem}
+    .service-card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: var(--shadow-xl); 
+      border-color: var(--accent);
+    }
+    .service-icon {
+      width: 60px; height: 60px; background: #f0f9ff; color: var(--accent);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+    }
+    /* Little accent bar on hover */
+    .service-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px;
+      background: var(--accent); transform: scaleX(0); transition: 0.3s;
+    }
+    .service-card:hover::after { transform: scaleX(1); }
 
-    /* About Section */
-    .about-section{background:var(--white)}
-    .about-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
-    
-    .about-img-wrapper{
-      position:relative;
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    /* --- Gallery Section --- */
+    .gallery-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+      margin-top: 40px;
     }
-    .about-img{
-      width:100%;height:100%;object-fit:cover;min-height:400px;
-      transition:transform 0.5s;
+    .gallery-item {
+      height: 250px; border-radius: var(--radius-sm); overflow: hidden; position: relative;
     }
-    .about-img-wrapper:hover .about-img{transform:scale(1.03)}
-    
-    .stats-row{display:flex;gap:32px;margin-top:32px;padding-top:32px;border-top:1px solid #e2e8f0}
-    .stat h4{font-size:2rem;color:var(--accent);margin-bottom:4px}
-    .stat span{font-size:0.9rem;color:var(--text-gray);font-weight:600}
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; transition: 0.5s;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
 
-    /* Contact Section */
-    .contact-form{
-      background:var(--white);padding:40px;border-radius:24px;
-      box-shadow:var(--shadow);
+    /* --- About Section --- */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center;
     }
-    .form-group{margin-bottom:20px}
-    .form-label{display:block;margin-bottom:8px;font-weight:600;font-size:0.9rem}
-    .form-input{
-      width:100%;padding:14px;border-radius:10px;
-      border:1px solid #e2e8f0;background:#f8fafc;
-      font-family:inherit;font-size:1rem;
+    .about-img-group { position: relative; }
+    .main-img { border-radius: var(--radius-lg); width: 100%; box-shadow: var(--shadow-xl); }
+    /* Floating badge on image */
+    .exp-badge {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--white); padding: 20px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      display: flex; align-items: center; gap: 15px;
     }
-    .form-input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(11,107,107,0.1)}
-    textarea.form-input{resize:vertical;min-height:120px}
+    .exp-number { font-size: 2.5rem; font-weight: 800; color: var(--action); line-height: 1; }
+    .exp-text { font-size: 0.9rem; font-weight: 700; line-height: 1.2; color: var(--primary); }
 
-    /* Footer */
-    footer{background:#111827;color:rgba(255,255,255,0.6);padding:60px 0 30px}
-    .footer-content{display:grid;gap:40px;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:40px;margin-bottom:24px}
-    .footer-col h4{color:var(--white);margin-bottom:20px}
+    /* --- Contact CTA --- */
+    .contact-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .contact-cta h2 { color: var(--white); margin-bottom: 20px; }
     
-    @media(min-width: 992px){
-      .hero-grid{grid-template-columns:1.2fr 0.8fr;gap:80px}
-      .cta-group{flex-direction:row}
-      .about-grid{grid-template-columns:1fr 1fr}
-      .footer-content{grid-template-columns:1fr 1fr 1fr}
-      .hero{padding:120px 0 140px}
-      .hero-content h1{font-size:3.5rem}
+    /* --- Form --- */
+    .contact-form-wrapper {
+      background: var(--white); padding: 40px; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+    .form-input {
+      width: 100%; padding: 16px; border-radius: 8px;
+      border: 1px solid #cbd5e1; background: #f8fafc;
+      font-family: inherit; font-size: 1rem; transition: 0.3s;
+    }
+    .form-input:focus {
+      outline: none; border-color: var(--accent); background: #fff;
+      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+    }
+
+    /* --- Footer --- */
+    footer { background: #0b1120; color: #94a3b8; padding: 80px 0 30px; border-top: 4px solid var(--action); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 60px; }
+    .footer-col h4 { color: var(--white); margin-bottom: 24px; font-size: 1.2rem; }
+    .footer-links a { display: block; margin-bottom: 12px; }
+    .footer-links a:hover { color: var(--action); padding-left: 5px; }
+
+    /* --- Responsive --- */
+    @media(min-width: 992px) {
+      .hero-content { grid-template-columns: 1fr 1fr; }
+      .gallery-grid { grid-template-columns: repeat(4, 1fr); }
+      .about-grid { grid-template-columns: 1fr 1fr; }
+      .hero-text h1 { font-size: 4rem; }
     }
   </style>
 </head>
@@ -176,167 +274,261 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#" class="logo">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        C.M Electrical & Plumbing
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--action)"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        C.M <span>Electrical & Plumbing</span>
       </a>
       <nav class="nav">
         <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="tel:+27721234567" class="nav-btn">Call 072 123 4567</a>
+        <a href="#contact" class="btn btn-primary">Get a Quote</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div style="color:#86efac;font-weight:700;letter-spacing:1px;margin-bottom:12px;text-transform:uppercase">Serving Midrand & Surrounds</div>
-        <h1>Your Local Plumbing & Electrical Experts.</h1>
-        <p>From burst pipes and blocked drains to tripping DB boards. C.M Electrical & Plumbing provides fast, reliable repairs for your home and office.</p>
-        <div class="cta-group">
-          <a href="tel:+27721234567" class="btn btn-primary">Call Now: 072 123 4567</a>
-          <a href="#contact" class="btn btn-outline">Request a Quote</a>
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge">Available 24/7 in Midrand</span>
+        <h1>Expert Repairs for your Home & Business.</h1>
+        <p>Don't let a burst pipe or a power outage ruin your day. We provide fast, certified electrical and plumbing solutions you can trust.</p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="#contact" class="btn btn-primary">Call 072 123 4567</a>
+          <a href="#services" class="btn btn-outline" style="color:white; border:1px solid white; padding:14px 28px; border-radius:8px; font-weight:600;">View Services</a>
         </div>
       </div>
       
-      <div class="glass-card">
-        <h3>Why Midrand Chooses Us</h3>
-        <div class="feature-row">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div><strong>Dual Expertise</strong><div style="font-size:0.85rem;opacity:0.8">Qualified Plumbers & Electricians</div></div>
-        </div>
-        <div class="feature-row">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div><strong>Rapid Response</strong><div style="font-size:0.85rem;opacity:0.8">Fast turnaround in the Midrand area</div></div>
-        </div>
-        <div class="feature-row">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <div><strong>Transparent Pricing</strong><div style="font-size:0.85rem;opacity:0.8">Fair quotes for all repairs</div></div>
-        </div>
+      <div class="hero-card">
+        <h3>Why Choose C.M?</h3>
+        <ul class="check-list">
+          <li>
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            No Call-Out Fee (if quote accepted)
+          </li>
+          <li>
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Certified Electricians & Plumbers
+          </li>
+          <li>
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            1 Year Workmanship Guarantee
+          </li>
+        </ul>
+        <p style="font-size:0.9rem; opacity:0.7; margin-top:20px;">"The team was at my house within 45 mins. Highly recommended!" — Sarah J.</p>
       </div>
     </div>
   </section>
 
+  <div class="container stats-container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>15+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3>500+</h3>
+        <p>Jobs Completed</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Satisfaction Rate</p>
+      </div>
+      <div class="stat-item">
+        <h3>24h</h3>
+        <p>Emergency Line</p>
+      </div>
+    </div>
+  </div>
+
   <section id="services" class="section">
     <div class="container">
-      <div class="text-center">
-        <span class="subtitle">What We Do</span>
-        <h2>Complete Home Maintenance</h2>
-        <p style="color:var(--text-gray)">One call handles both your plumbing emergencies and electrical faults.</p>
+      <div class="text-center" style="max-width:700px; margin:0 auto;">
+        <span class="badge">Our Expertise</span>
+        <h2>Complete Maintenance Solutions</h2>
+        <p style="color:var(--text-light); margin-top:16px;">We combine two essential trades into one service. No need to call multiple contractors.</p>
       </div>
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.74 5.88a5.9 5.9 0 0 1 1.76 4.19A5.92 5.92 0 0 1 13.58 18H12v4h-1v-4H10.5a6 6 0 0 1-4.24-10.24L12 2.69z"/></svg></div>
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.74 5.88a5.9 5.9 0 0 1 1.76 4.19A5.92 5.92 0 0 1 13.58 18H12v4h-1v-4H10.5a6 6 0 0 1-4.24-10.24L12 2.69z"/></svg>
+          </div>
           <h3>Plumbing Repairs</h3>
-          <p>Leaking taps, burst pipes, blocked drains, and toilet repairs. We fix water issues quickly to prevent damage.</p>
+          <p style="color:var(--text-light)">From leaking taps to major pipe bursts. We detect leaks fast and fix them properly.</p>
         </div>
-        
+
         <div class="service-card">
-          <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
-          <h3>Geyser Maintenance</h3>
-          <p>We handle both the plumbing (valves/bursts) and electrical (thermostats/elements) sides of geyser repairs.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg></div>
+          <div class="service-icon">
+             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><line x1="12" y1="2" x2="12" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+          </div>
           <h3>Electrical Faults</h3>
-          <p>Tripping DB boards, plug point repairs, light fittings, and general domestic wiring maintenance.</p>
+          <p style="color:var(--text-light)">Tripping DB boards, power failures, and dangerous wiring. We ensure your home is safe and compliant.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h3>Geyser Maintenance</h3>
+          <p style="color:var(--text-light)">No hot water? We fix elements, thermostats, and valves for all major geyser brands.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section about-section">
-    <div class="container about-grid">
-      <div class="about-img-wrapper">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800" alt="Electrical and Plumbing Tools" class="about-img">
-      </div>
-      <div>
-        <span class="subtitle">About C.M Electrical & Plumbing</span>
-        <h2>Your Local Midrand Handyman Team</h2>
-        <p style="margin-bottom:24px;color:var(--text-gray)">
-          C.M Electrical and Plumbing Service was founded to solve a simple problem: homeowners hate calling two different companies for one house. 
-        </p>
-        <p style="margin-bottom:24px;color:var(--text-gray)">
-          Based in Midrand, we serve the local community with pride. Whether it's a blocked drain at 2 AM or a tripping power switch, our team is equipped to handle the job safely and professionally. We believe in doing the job right the first time.
-        </p>
-        
-        <div class="stats-row">
-          <div class="stat">
-            <h4>100%</h4>
-            <span>Local</span>
-          </div>
-          <div class="stat">
-            <h4>2</h4>
-            <span>Trades</span>
-          </div>
-          <div class="stat">
-            <h4>24/7</h4>
-            <span>Support</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section" style="background:var(--bg-light)">
+  <section id="work" class="section bg-white">
     <div class="container">
       <div class="text-center">
-        <h2>Get a Service Quote</h2>
-        <p style="color:var(--text-gray)">Fill in the form below or call us. We cover Midrand and surrounding areas.</p>
+        <h2>Recent Projects</h2>
+        <p style="color:var(--text-light); margin-bottom: 20px;">A glimpse at the quality work we deliver across Midrand.</p>
+      </div>
+
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" alt="Plumbing Sink Repair">
+        </div>
+        
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1558402529-d2638a7023e9?auto=format&fit=crop&q=80&w=800" alt="Electrical Wiring">
+        </div>
+        
+        <div class="gallery-item">
+           <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&q=80&w=800" alt="Professional Tools">
+        </div>
+        
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1556911220-e6189296497c?auto=format&fit=crop&q=80&w=800" alt="Kitchen Installation">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-img-group">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=1000" alt="Team at work" class="main-img">
+        <div class="exp-badge">
+          <div class="exp-number">15</div>
+          <div class="exp-text">Years of<br>Excellence</div>
+        </div>
       </div>
       
-      <div style="max-width:600px;margin:0 auto">
-        <form class="contact-form" action="https://formspree.io/f/yourFormId" method="POST">
+      <div>
+        <span class="badge">About Us</span>
+        <h2>Your Local Maintenance Partner</h2>
+        <p style="margin-bottom:20px; color:var(--text-light); font-size:1.1rem;">
+          C.M Electrical and Plumbing Service was founded to solve a simple problem: homeowners hate calling two different companies for one house.
+        </p>
+        <p style="margin-bottom:30px; color:var(--text-light);">
+          Based in Midrand, we serve the local community with pride. Whether it's a blocked drain at 2 AM or a tripping power switch, our team is equipped to handle the job safely and professionally.
+        </p>
+        
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div style="width:10px; height:10px; background:var(--action); border-radius:50%;"></div>
+                <strong>Fully Insured</strong>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+                <div style="width:10px; height:10px; background:var(--action); border-radius:50%;"></div>
+                <strong>Background Checked Staff</strong>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" style="background:#e2e8f0;">
+    <div class="container">
+      <div class="about-grid"> <div>
+          <h2>Ready to fix your home?</h2>
+          <p style="margin-bottom:32px; color:var(--text-light);">Contact us today for a free quote. We usually respond within 1 hour during business hours.</p>
           
-          <div class="form-group">
-            <label class="form-label" for="name">Name</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
+          <div class="contact-cta">
+            <h3>Need Emergency Help?</h3>
+            <p style="opacity:0.9; margin-bottom:24px;">Our lines are open 24/7 for urgent repairs.</p>
+            <a href="tel:+27721234567" class="btn btn-primary" style="width:100%; font-size:1.2rem;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              072 123 4567
+            </a>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="email@address.com" required>
-          </div>
+        <div class="contact-form-wrapper">
+          <form action="https://formspree.io/f/yourFormId" method="POST">
+            <h3 style="margin-bottom:24px;">Send a Message</h3>
+            
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-input" placeholder="John Doe" required>
+            </div>
 
-          <div class="form-group">
-            <label class="form-label" for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="072 123 4567" required>
-          </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" name="phone" class="form-input" placeholder="072 ..." required>
+            </div>
 
-          <div class="form-group">
-            <label class="form-label" for="message">What do you need help with?</label>
-            <textarea id="message" name="message" class="form-input" rows="4" placeholder="e.g. My kitchen sink is leaking..." required></textarea>
-          </div>
+            <div class="form-group">
+              <label class="form-label">Service Needed</label>
+              <select name="service" class="form-input">
+                <option>Plumbing Issue</option>
+                <option>Electrical Issue</option>
+                <option>Geyser Repair</option>
+                <option>General Maintenance</option>
+              </select>
+            </div>
 
-          <button type="submit" class="btn btn-primary" style="width:100%">Send Request</button>
-        </form>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea name="message" rows="4" class="form-input" placeholder="Describe the problem..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark" style="width:100%">Submit Request</button>
+          </form>
+        </div>
+
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <div class="footer-content">
+      <div class="footer-grid">
         <div class="footer-col">
-          <h4>C.M Electrical & Plumbing</h4>
-          <p>Professional repair services for Midrand homes and businesses.</p>
+          <a href="#" class="logo" style="color:white; margin-bottom:20px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--action)"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            C.M Electrical
+          </a>
+          <p>Your trusted partners for residential and commercial repairs in Midrand.</p>
         </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>Midrand, Gauteng<br>
-          Phone: 072 123 4567<br>
-          Email: info@cmelectricalplumbing.co.za</p>
-        </div>
-        <div class="footer-col">
+        
+        <div class="footer-col footer-links">
           <h4>Services</h4>
-          <p>Plumbing Repairs<br>Electrical Maintenance<br>Geyser Installations</p>
+          <a href="#">Blocked Drains</a>
+          <a href="#">Wiring Faults</a>
+          <a href="#">Geyser Installations</a>
+          <a href="#">COC Certificates</a>
+        </div>
+        
+        <div class="footer-col footer-links">
+          <h4>Company</h4>
+          <a href="#about">About Us</a>
+          <a href="#work">Our Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p style="margin-bottom:10px;">Midrand, Gauteng</p>
+          <p style="color:var(--white); font-weight:bold; font-size:1.2rem;">072 123 4567</p>
+          <p>info@cmelectrical.co.za</p>
         </div>
       </div>
-      <div style="text-align:center;font-size:0.85rem;opacity:0.5">
-        &copy; 2024 C.M Electrical & Plumbing Service. All rights reserved.
+      
+      <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:30px; text-align:center; opacity:0.6; font-size:0.9rem;">
+        &copy; 2025 C.M Electrical & Plumbing Service. All rights reserved.
       </div>
     </div>
   </footer>
